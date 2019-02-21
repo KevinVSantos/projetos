@@ -1,0 +1,11 @@
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\bin\Debug\netcoreapp2.1\Delegate.deps.json
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\bin\Debug\netcoreapp2.1\Delegate.runtimeconfig.json
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\bin\Debug\netcoreapp2.1\Delegate.runtimeconfig.dev.json
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\bin\Debug\netcoreapp2.1\Delegate.dll
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\bin\Debug\netcoreapp2.1\Delegate.pdb
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\obj\Debug\netcoreapp2.1\Delegate.csprojAssemblyReference.cache
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\obj\Debug\netcoreapp2.1\Delegate.csproj.CoreCompileInputs.cache
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\obj\Debug\netcoreapp2.1\Delegate.AssemblyInfoInputs.cache
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\obj\Debug\netcoreapp2.1\Delegate.AssemblyInfo.cs
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\obj\Debug\netcoreapp2.1\Delegate.dll
+C:\Users\Kevin.Santos\Desktop\C#\Delegate\Delegate\obj\Debug\netcoreapp2.1\Delegate.pdb
