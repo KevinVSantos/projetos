@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste 3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">	</script>
+	<style type="text/css">
+		.div1{
+			width: 500px;
+			height: 250px;
+			background: blue;
+			background-image: linear-gradient(to right,#00F 0%,#00F 0%,#F00 0%, #F00 100%);
+
+		}
+		.div2{
+			width: 500px;
+			height: 250px;
+			background: yellow;
+			background-image: linear-gradient(to right,#FF0 0%,#FF0 0%,#0F0 0%, #0F0 100%);
+
+		}
+
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			i=0;
+			Subir=null ;
+			Descer= null;
+
+
+
+			$(".div1").mousemove(function(move){
+				var localx= move.pageX;
+				var localy= move.pageY;
+				var porcentagem=(((localx-8)/500)*100);
+
+				if(porcentagem<2){
+					porcentagem=0;
+				}else if(porcentagem>98){
+
+					porcentagem=100;
+				}
+
+				$(".div1").css({
+					"background-image":"linear-gradient(to right, #00F 0%,#00F "+String(porcentagem)+"%,#F00 "+String(porcentagem)+"%, #F00 100%)"
+
+				});
+
+
+			});
+
+
+			$(".div2").mouseenter(function(){
+
+					clearInterval(Descer);
+
+					Subir=setInterval(function(){
+
+						$(".div2").css({
+							"background-image":"linear-gradient(to right, #FF0 0%,#FF0 "+String(i)+"%,#0F0 "+String(i)+"%, #0F0 100%)",
+						});
+						
+						i+=1;
+						if(i>100)
+						{
+							clearInterval(Subir);
+						}
+
+					},2);
+
+				
+
+			}).mouseleave(function(){
+
+					clearInterval(Subir);
+
+				
+					Descer=setInterval(function(){
+
+						$(".div2").css({
+							"background-image":"linear-gradient(to right, #FF0 0%,#FF0 "+String(i)+"%,#0F0 "+String(i)+"%, #0F0 100%)",
+						});
+						
+						i-=1;
+						if(i<0)
+						{
+							clearInterval(Descer);
+						}
+
+					},4);
+
+
+
+			});
+
+
+		});
+
+	</script>
+</head>
+<body>
+	<div class="div1">
+		
+
+	</div>
+
+	<div class="div2">
+		
+	</div>
+
+</body>
+</html>

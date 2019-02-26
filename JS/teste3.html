@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste 3</title>
+	<style type="text/css">
+		table{
+			border: 1px solid #000;
+			border-collapse: collapse;
+			text-align: center;
+			background: silver;
+
+		}
+		.zebrada{
+			background: red;
+		}
+
+	</style>
+</head>
+<body>
+	<table class="Tabela">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Telefone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Kevn</th>
+				<th>997678185</th>
+			</tr>
+			<tr>
+				<th>Maria</th>
+				<th>998907472</th>
+			</tr>
+			<tr>
+				<th>Mamis</th>
+				<th>996351220</th>
+			</tr>
+			<tr>
+				<th>Vó</th>
+				<th>35426379</th>
+			</tr>
+
+		</tbody>
+
+	</table>
+
+	<script type="text/javascript">
+		window.onload= function(){
+			var zebrar= document.querySelectorAll(".Tabela tbody tr");
+
+			var tam=zebrar.length;
+
+			for(var i=0; i< tam ; i+=2 )
+			{
+				zebrar[i].className="zebrada";
+			}
+		}
+
+	</script>
+
+</body>
+</html>
