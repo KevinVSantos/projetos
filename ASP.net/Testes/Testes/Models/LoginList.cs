@@ -11,13 +11,13 @@ namespace Testes.Models
         public static List<Login> Acesso = new List<Login>();
         public static int status=0;
 
-        public static void  IniciarLista()
+        public static void IniciarLista()
         {
             if (status == 0)
             {
-                Acesso.Add(new Login("123", "123", "Primeiro", "123@gmail.com"));
-                Acesso.Add(new Login("456", "456", "Segundo", "456@gmail.com"));
-                Acesso.Add(new Login("789", "789", "Inicial", "789@gmail.com"));
+                Acesso.Add(new Login() { login = "123", senha = "123", NomeUsuario = "Primeiro", Email = "123@gmail.com" });
+                Acesso.Add(new Login(){ login = "456", senha = "456", NomeUsuario = "Segundo", Email = "456@gmail.com"});
+            Acesso.Add(new Login(){ login = "789", senha = "789", NomeUsuario = "Inicial", Email = "789@gmail.com"});
                 status++;
             }
 

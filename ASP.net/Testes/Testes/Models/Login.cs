@@ -9,18 +9,15 @@ namespace Testes.Models
 {
     public class Login
     {
-       
+        [Required(ErrorMessage ="Login vazio!")]
         public string login;
+        [Required(ErrorMessage = "Senha vazio!")]
         public string senha;
+        [Required(ErrorMessage = "Nome vazio!")]
         public string NomeUsuario;
+        [Required(ErrorMessage = "Email vazio!")]
         public string Email;
 
-        public Login(string Log, string Sen, string Nome, string Mail) {
-            this.login = Log;
-            this.senha = Sen;
-            this.NomeUsuario = Nome;
-            this.Email = Mail;
-
-        }
+        
     }
 }

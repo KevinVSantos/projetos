@@ -1,37 +1,38 @@
-﻿@model FormCollection
+﻿@model Testes.Models.Login
 @{
     ViewBag.Title = "Registro";
 }
 
 <h2>Registro</h2>
 
-<form action="#" method="post">
+@using (Html.BeginForm())
+{
     @Html.ValidationSummary(true)
     <h2>    Nome</h2>
     <div>
-        <input type="text" name="Nome" />
-        @Html.ValidationMessageFor(Model=> Model["Nome"])
+        @Html.EditorFor(Modelo=> Model.NomeUsuario)
+        @Html.ValidationMessageFor(Model => Model.NomeUsuario)
     </div>
 
     <h2>    Email</h2>
     <div>
-        <input type="text" name="Email" />
-        @Html.ValidationMessageFor(Model => Model["Email"])
+        @Html.EditorFor(Modelo => Model.Email)
+        @Html.ValidationMessageFor(Model => Model.Email)
     </div>
 
     <h2>    Login</h2>
     <div>
-        <input type="text" name="Login" />
-        @Html.ValidationMessageFor(Model => Model["Login"])
+        @Html.EditorFor(Modelo => Model.login)
+        @Html.ValidationMessageFor(Model => Model.login)
     </div>
 
     <h2>    Senha</h2>
     <div>
-        <input type="text" name="Senha" />
-        @Html.ValidationMessageFor(Model => Model["Senha"])
+        @Html.PasswordFor(Modelo => Model.senha)
+        @Html.ValidationMessageFor(Model => Model.senha)
     </div>
 
     <input type="submit" name="Registrar" value="Registrar-se" />
-</form>
+}
 
 

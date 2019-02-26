@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Testes.Models;
 
 namespace Testes.Controllers
 {
@@ -19,9 +20,10 @@ namespace Testes.Controllers
         public ActionResult Index(FormCollection Formulario) {
 
             
-            if(string.IsNullOrEmpty(Formulario["Nome"]))
+            if(string.IsNullOrEmpty(Formulario["NomeUsuario"]))
             {
-                ModelState.AddModelError("Nome", "O nome esta vazio. Preencha-o.");
+                ModelState.AddModelError("NomeUsuario", "O nome esta vazio. Preencha-o.");
+                
             }
             if (string.IsNullOrEmpty(Formulario["Email"]))
             {
@@ -36,7 +38,10 @@ namespace Testes.Controllers
                 ModelState.AddModelError("Login", "O login esta vazio. Preencha-o.");
             }
             if (ModelState.IsValid){
-                return View("Sucess");
+
+                var Novo = new Login() { login=Formulario["Login"], senha=Formulario["Senha"], Email=Formulario["Email"], NomeUsuario=Formulario["NomeUsuario"]};
+                
+                return View("Sucess", Novo);
             }
 
             return View();

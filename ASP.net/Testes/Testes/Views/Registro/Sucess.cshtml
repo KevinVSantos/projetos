@@ -1,5 +1,34 @@
-﻿@{
-    ViewBag.Title = "Sucesso.";
- }
+﻿@model Testes.Models.Login
+@using Testes.Models;
 
-<h2>Registrado com Sucesso!</h2>
+@{
+    ViewBag.Title = "Sucesso.";
+}
+
+
+@{
+    var resultado = LoginList.Acesso.Find(x => Convert.ToString(x.login).Equals(Convert.ToString(Model.login)));
+    if (resultado == null)
+    {
+        try
+        {
+            LoginList.Acesso.Add(new Login() { NomeUsuario = Model.NomeUsuario, Email = Model.Email, login = Model.login, senha = Model.senha });
+            <h2>Usuario Cadastrado com Sucesso.</h2>
+            @Html.ActionLink("Inicio", "Index", "Home")
+        }
+        catch
+        {
+            <h2>Algo deu errado. Tente novalmente.</h2>
+            @Html.ActionLink("Voltar", "Index", "Registro")
+        }
+    }
+    else
+    {
+        <h2>Login já registrado. Tente outro.</h2>
+        @Html.ActionLink("Voltar", "Index", "Registro")
+    }
+    <h1> @Model.NomeUsuario</h1>
+
+}
+
+
