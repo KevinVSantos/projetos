@@ -1,0 +1,21 @@
+﻿@using Testes.Models
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Logar</h2>
+
+@{
+    Login resultado = LoginList.Acesso.Find(x => Convert.ToString(x.login).Equals(ViewData["login"]) && Convert.ToString(x.senha).Equals(ViewData["senha"]));
+    if (resultado != null)
+    {
+        <h3>Bem vindo @resultado.NomeUsuario</h3>
+        <h3>Seu email é: @resultado.Email</h3>
+    }
+    else
+    {
+
+        <h3>Usuário nao registrado.</h3>
+
+    }
+}

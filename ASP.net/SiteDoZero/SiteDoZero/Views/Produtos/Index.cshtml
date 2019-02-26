@@ -1,0 +1,28 @@
+﻿<h2>Lista de Protudos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Cadastro</th>
+        </tr>
+    </thead>
+        
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Tipo</td>
+                <td>@item.Preço</td>
+                <td>@item.Qtde</td>
+                <td>@item.DataCadastro</td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>

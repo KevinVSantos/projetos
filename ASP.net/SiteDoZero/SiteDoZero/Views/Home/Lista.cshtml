@@ -1,0 +1,35 @@
+﻿
+
+
+<h2>Lista</h2>
+
+<div>
+    <b>
+        Nome
+    </b>
+</div>
+<div>
+    @ViewData["PessoaNome"]
+</div>
+
+<div>
+    <b>
+        Id
+    </b>
+</div>
+<div>
+    @ViewData["PessoaId"]
+</div>
+
+<div>
+    <b>
+        Email
+    </b>
+</div>
+<div>
+    @ViewData["PessoaEmail"]
+</div>
+
+<div>
+    @Html.ActionLink("Ir para Home", "Index", "Home");
+</div>

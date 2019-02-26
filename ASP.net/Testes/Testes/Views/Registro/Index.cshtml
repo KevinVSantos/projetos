@@ -1,0 +1,37 @@
+﻿@model FormCollection
+@{
+    ViewBag.Title = "Registro";
+}
+
+<h2>Registro</h2>
+
+<form action="#" method="post">
+    @Html.ValidationSummary(true)
+    <h2>    Nome</h2>
+    <div>
+        <input type="text" name="Nome" />
+        @Html.ValidationMessageFor(Model=> Model["Nome"])
+    </div>
+
+    <h2>    Email</h2>
+    <div>
+        <input type="text" name="Email" />
+        @Html.ValidationMessageFor(Model => Model["Email"])
+    </div>
+
+    <h2>    Login</h2>
+    <div>
+        <input type="text" name="Login" />
+        @Html.ValidationMessageFor(Model => Model["Login"])
+    </div>
+
+    <h2>    Senha</h2>
+    <div>
+        <input type="text" name="Senha" />
+        @Html.ValidationMessageFor(Model => Model["Senha"])
+    </div>
+
+    <input type="submit" name="Registrar" value="Registrar-se" />
+</form>
+
+

@@ -1,0 +1,33 @@
+﻿@model SiteDoZero.Models.Pessoa
+<h1>Site do Zero</h1>
+
+
+<form action="Home/Lista" method="post">
+
+    <fieldset>
+        <legend>Pessoa</legend>
+        <div>
+            <label for="PessoaId">Código</label>
+        </div>
+        <div>
+            <input type="number" name="PessoaId" value="@Model.Id" />
+        </div>
+        <div>
+            <label for="Nome"> Nome </label>
+        </div>
+        <div>
+            <input type="text" name="PessoaNome" value="@Model.Nome" />
+        </div>
+        <div>
+            <label for="Email"> Email </label>
+        </div>
+        <div>
+            <input type="text" name="PessoaEmail" value="@Model.Email" />
+        </div>
+
+        <input type="submit" name="enviar" value="enviar" />
+
+    </fieldset>
+
+</form>
+

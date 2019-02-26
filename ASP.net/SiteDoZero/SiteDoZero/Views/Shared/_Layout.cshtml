@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SiteDoZero</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+            <li>@Html.ActionLink("Produtos", "Index", "Produtos")</li>
+            <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
+        </ul>
+    </nav>
+
+    <div>
+
+        @RenderBody()
+
+    </div>
+    
+    <footer>
+        <p>MeuSite.com.br (2019)</p>
+    </footer>
+
+</body>
+</html>

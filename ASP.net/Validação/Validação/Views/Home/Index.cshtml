@@ -1,0 +1,110 @@
+﻿@model Validação.Models.Pessoa
+
+<h2>    Validação de Pessoa</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+       
+<fieldset>
+    <legend>Dados da Pessoa</legend>
+    <div>
+
+        @Html.LabelFor(modelo => modelo.Nome)
+
+    </div>
+    <div>
+
+        @Html.EditorFor(model => model.Nome)
+        @Html.ValidationMessageFor(model => model.Nome)
+
+    </div>
+
+
+
+    <div>
+
+        @Html.LabelFor(modelo => modelo.Observaçoes)
+
+    </div>
+    <div>
+
+        @Html.TextAreaFor(model => model.Observaçoes)
+        @Html.ValidationMessageFor(model => model.Observaçoes)
+
+    </div>
+
+
+
+    <div>
+
+        @Html.LabelFor(modelo => modelo.Idade)
+
+    </div>
+    <div>
+
+        @Html.EditorFor(model => model.Idade)
+        @Html.ValidationMessageFor(model => model.Idade)
+
+    </div>
+
+
+
+    <div>
+
+        @Html.LabelFor(modelo => modelo.Email)
+
+    </div>
+    <div>
+
+        @Html.EditorFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+
+    </div>
+
+
+    <div>
+
+        @Html.LabelFor(modelo => modelo.Login)
+
+    </div>
+    <div>
+
+        @Html.EditorFor(model => model.Login)
+        @Html.ValidationMessageFor(model => model.Login)
+
+    </div>
+
+
+    <div>
+
+        @Html.LabelFor(modelo => modelo.Senha)
+
+    </div>
+    <div>
+
+        @Html.PasswordFor(model => model.Senha)
+        @Html.ValidationMessageFor(model => model.Senha)
+
+    </div>
+
+    <div>
+
+        @Html.LabelFor(modelo => modelo.ConfirmarSenha)
+
+    </div>
+    <div>
+
+        @Html.PasswordFor(model => model.ConfirmarSenha)
+        @Html.ValidationMessageFor(model => model.ConfirmarSenha)
+
+    </div>
+
+    <input type="submit" name="enviar" value="enviar" />
+
+</fieldset>
+}
+    
+
+@section Scripts{
+        @Scripts.Render("~/budles/jqueryval")
+    }

@@ -1,0 +1,2 @@
+C:\Users\Kevin.Santos\Desktop\ASP.net\Validação\Validação\obj\Debug\Validação.csprojAssemblyReference.cache
+C:\Users\Kevin.Santos\Desktop\ASP.net\Validação\Validação\obj\Debug\Validação.csproj.CoreCompileInputs.cache
